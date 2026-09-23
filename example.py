@@ -7,7 +7,7 @@ from model import ImageEmbeddingModel
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--model", default=".")
+    parser.add_argument("--model", default="yifanouyang/smolbge-image-embedding")
     parser.add_argument("--images", nargs="+", required=True)
     parser.add_argument("--query", required=True)
     parser.add_argument("--device", choices=["cpu", "cuda", "mps"])

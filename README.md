@@ -1,12 +1,12 @@
-# SmolBGE: direct image embeddings for BGE retrieval
+# SmolBGE: direct image embeddings for retrieval
 
-[Download v2 weights](https://huggingface.co/yifanouyang/smolbge-image-embedding/tree/main/v2) · [Method](STUDY.md) · [Reproduce](REPRODUCE.md)
+[Model weights](https://huggingface.co/yifanouyang/smolbge-image-embedding) · [Method](STUDY.md) · [Reproduce](REPRODUCE.md)
 
-SmolBGE maps images to **384-dimensional BGE text space** without generating captions. v2 uses a frozen Qwen3-VL-Embedding-2B image encoder, a frozen BGE-small text encoder, and a trained 1.87M-parameter adapter. The Hugging Face package contains all three components (~4.1 GiB).
+SmolBGE converts an image directly into a **384-dimensional vector in BGE text space**, without generating a caption. It lets image collections be searched with text queries and used as the image-retrieval component of a multimodal RAG system.
 
 ```text
-image → frozen image encoder → trained MLP → 384-d vector
-text  → frozen BGE encoder               → 384-d vector → cosine retrieval
+image → frozen Qwen3-VL image encoder → trained MLP → 384-d vector
+text  → frozen BGE encoder                       → 384-d vector → cosine retrieval
 ```
 
 ## Use
@@ -30,16 +30,16 @@ scores = image_vectors @ query_vector
 
 ## Measured results
 
-Text→image Recall@1 (%), with the same custom candidate sets. v2 is the released seed-42 checkpoint. These sets were inspected in earlier rounds, and the change from v0 includes a different image encoder.
+Text→image Recall@1 on custom candidate sets:
 
-| Dataset | Images searched | v0 | v2 |
-|---|---:|---:|---:|
-| COCO | 500 | 60.76 | **67.00** |
-| Flickr8k | 1,089 | 44.67 | **68.13** |
-| DOCCI | 500 | 43.40 | **57.00** |
+| Dataset | Images searched | Recall@1 |
+|---|---:|---:|
+| COCO | 500 | 67.00% |
+| Flickr8k | 1,089 | 68.13% |
+| DOCCI | 500 | 57.00% |
 
-Training used **4,000 COCO + 6,000 Flickr8k images and 49,994 descriptions**. DOCCI was used for evaluation only. A separate 500-image DOCCI confirmation set gave v2 **63.2%** text→image R@1. [Evaluation protocol and metrics](results/evaluation.json) · [Split fingerprints](splits/index.json) · [Data attribution](ATTRIBUTION.md).
+Training used **4,000 COCO + 6,000 Flickr8k images and 49,994 descriptions**. DOCCI was used for evaluation only; a separate 500-image DOCCI confirmation set yielded **63.2%** text→image Recall@1. [Evaluation details](results/evaluation.json) · [Split fingerprints](splits/index.json) · [Data attribution](ATTRIBUTION.md).
 
-On one local device, warmed batch-1 image encoding averaged **307.9 ms** for v2, **572.0 ms** for caption→BGE, and **61.2 ms** for v0 (same 96 images, three repeats). Image decode and model forward are included; model loading, text encoding, vector search and answer generation are excluded. Hardware details are withheld, so these times describe this run and are not a portable speed guarantee. [Timing protocol and records](results/latency.json).
+In one local warmed batch-1 run, direct image encoding averaged **307.9 ms/image** versus **572.0 ms/image** for caption→BGE on the same 96 images over three repeats. These are measurements of one run, not a portable speed guarantee; [timing records](results/latency.json) specify the scope.
 
-[Training code](research_code/research_round2_train.py) · [Method](STUDY.md) · [Reproduction](REPRODUCE.md). Code and new adapter weights are Apache-2.0; [base-model and data terms](ATTRIBUTION.md) remain separate. OCR, mixed indexes and RAG answer quality remain untested.
+[Training code](research_code/train_adapter.py) · [Reproduction](REPRODUCE.md). Code and adapter weights are Apache-2.0; [base-model and data terms](ATTRIBUTION.md) remain separate. OCR, mixed indexes, multilingual queries and RAG answer quality remain untested.

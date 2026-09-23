@@ -20,7 +20,7 @@ The first verified preparation found one exact duplicate pair:
 `3050606344_af711c726c` and `2851198725_37b6027625`. After merging their captions,
 the pre-cross-source-audit split was 6,000 train / 1,000 validation / 1,090 sealed
 test. The audit then found that `flickr8k:2947274789_a1a35b33c3` in the new sealed
-test set was byte-identical to `coco:110449` in the legacy training set. It is
+test set was byte-identical to `coco:110449` in the COCO training set. It is
 excluded from the new sealed test manifest, recorded in `exclusions.json`, and
 left on disk for provenance. The final split is **6,000 train / 1,000 validation /
 1,089 sealed test**, with **29,994 / 5,003 / 5,443** captions respectively.
@@ -33,7 +33,7 @@ why perceptual-hash candidates are not deleted automatically.
 The final audit covers 14,089 retained images (5,000 COCO, 8,089 Flickr8k, and
 1,000 DOCCI). It reports zero exact-byte matches across different splits/sources
 and only the one rejected cross-source pHash candidate above. The full report is
-`artifacts/research/data/leakage_audit.json`. Near-duplicate overlap within one
+`data/leakage_audit.json`. Near-duplicate overlap within one
 source and semantic entity overlap are not exhaustively resolved by this audit.
 
 DOCCI contains long human-written descriptions and many subtly related images.
@@ -55,12 +55,12 @@ official cluster/entity metadata for a future stricter cluster-disjoint study.
 ## Local preparation
 
 ```bash
-.venv/bin/python scripts/research_prepare_data.py --dataset all --workers 3
+python research_code/research_prepare_data.py --dataset all --workers 3 --root data
 ```
 
 The script only reads public HTTP data objects and local Parquet files. It never
 executes dataset loading scripts and never uses or prints a Hugging Face token.
-All downloads and extracted images stay under `artifacts/research/data`.
+All downloads and extracted images stay under `data/`.
 Pinned Parquet SHA256 hashes are checked against the pinned Hugging Face Git-LFS
 object digests. Images retain their original bytes, resolution, and encoding.
 The official DOCCI description file is also pinned by SHA256
@@ -69,8 +69,8 @@ The official DOCCI description file is also pinned by SHA256
 Run a cross-source audit against the existing COCO split files:
 
 ```bash
-.venv/bin/python scripts/research_prepare_data.py --audit-only \
-  --audit-coco ../mask-evidence-rs/data/processed/embedding --audit-perceptual
+python research_code/research_prepare_data.py --audit-only --root data \
+  --audit-coco data/coco --audit-perceptual
 ```
 
 This records exact image-byte overlap and cross-source 64-bit DCT perceptual-hash
@@ -82,11 +82,11 @@ audit, and PyArrow is required for Parquet preparation.
 
 Output manifests:
 
-- `artifacts/research/data/flickr8k/train.jsonl`
-- `artifacts/research/data/flickr8k/val.jsonl`
-- `artifacts/research/data/flickr8k/sealed_test.jsonl`
-- `artifacts/research/data/docci/dev.jsonl`
-- `artifacts/research/data/docci/sealed_test.jsonl`
+- `data/flickr8k/train.jsonl`
+- `data/flickr8k/val.jsonl`
+- `data/flickr8k/sealed_test.jsonl`
+- `data/docci/dev.jsonl`
+- `data/docci/sealed_test.jsonl`
 
 Each JSONL row contains `image_id`, absolute `image_file`, `captions`, `source`,
 `split`, `original_split`, and `image_sha256`. Corresponding `*_ids.json` files

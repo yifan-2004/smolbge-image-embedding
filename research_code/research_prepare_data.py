@@ -24,7 +24,7 @@ FLICKR_REVISION = "81fc5f3a41274c80f17b0406426d57cac57ce6fb"
 DOCCI_REVISION = "d25e433474a72db3853da8e208d564e9b98795e6"
 DOCCI_ANNOTATIONS = "https://storage.googleapis.com/docci/data/docci_descriptions.jsonlines"
 DOCCI_ANNOTATION_SHA256 = "c9df4819963883af35ddd2cf257949892fd8c6d88b33a012094352df60719800"
-# Frozen before any new-model test evaluation; the old released adapter saw this COCO training image.
+# Known exact overlap with the COCO training inventory.
 KNOWN_COCO_TRAIN_OVERLAP = {
     "b4f1012183b47482a31955ac38bbad9b7711b018ff20e2cb60b355033f323dc6": "coco:110449"
 }
@@ -174,7 +174,7 @@ def prepare_flickr(root: Path, seed: int, workers: int) -> dict:
                 exclusions.append({"image_id": row["image_id"], "split": name,
                                    "image_sha256": row["image_sha256"],
                                    "overlap_with": KNOWN_COCO_TRAIN_OVERLAP[row["image_sha256"]],
-                                   "reason": "Exact image bytes already used in legacy COCO training"})
+                                   "reason": "Exact image bytes already used in COCO training"})
             else:
                 retained.append(row)
         splits[name] = retained
@@ -334,7 +334,7 @@ def audit_cross_dataset(root: Path, coco_root: Path, perceptual: bool = False) -
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dataset", choices=["flickr8k", "docci", "all"], default="all")
-    parser.add_argument("--root", type=Path, default=Path("artifacts/research/data"))
+    parser.add_argument("--root", type=Path, default=Path("data"))
     parser.add_argument("--seed", type=int, default=2026)
     parser.add_argument("--workers", type=int, choices=[1, 2, 3], default=3)
     parser.add_argument("--audit-coco", type=Path, help="Directory containing existing COCO train/validation/test JSONL")

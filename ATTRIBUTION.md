@@ -2,16 +2,12 @@
 
 ## Frozen models
 
-- [CLIP ViT-B/32](https://huggingface.co/openai/clip-vit-base-patch32), OpenAI.
-- [SigLIP 2 base patch16 224](https://huggingface.co/google/siglip2-base-patch16-224), Google.
 - [Qwen3-VL-Embedding-2B](https://huggingface.co/Qwen/Qwen3-VL-Embedding-2B), Qwen.
   Qwen processing follows the official chat format and last-valid-token pooling,
   using the upstream `qwen-vl-utils` library. This study caps image pixels at
   262,144 and sequence length at 8,192; it is not the official full-resolution
   leaderboard configuration. Qwen is already retrieval-trained.
 - [BGE-small-en-v1.5](https://huggingface.co/BAAI/bge-small-en-v1.5), BAAI.
-- [SmolVLM2-500M-Video-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct),
-  Hugging Face, used by the older adapter and caption-latency baseline.
 
 The release bundles the exact pinned Qwen and BGE checkpoints under
 `base_models/`, alongside our trained adapter. Qwen remains Apache-2.0 and
@@ -25,7 +21,7 @@ certify commercial clearance for the trained model.
 COCO val2017 captions, custom 4,000/500/500 split; Flickr8k, custom
 6,000/1,000/1,089 split after recorded duplicate handling; DOCCI, custom
 500-development/500-regression subsets from the original test collection,
-plus a later 500-image confirmation from previously unused test IDs.
+plus a separate 500-image confirmation from unused test IDs.
 
 - [COCO](https://cocodataset.org/#download), Lin et al.; caption annotations and
   original source photographs retain their respective terms.
@@ -61,5 +57,5 @@ MLPs, contrastive learning or neighborhood distillation are new.
   precedent for adapter-based backward compatibility and knowledge preservation.
   Our image-to-fixed-text-space setting is not evidence of novelty by itself.
 
-For differences, confounds and falsifiable follow-up questions, see the
-[interpretation guide](research/round2/INTERPRETATION_GUIDE.md).
+The reported retrieval results are specific to the published custom splits and
+do not establish end-to-end RAG answer quality.

@@ -1,8 +1,8 @@
-"""Round-two frozen-encoder alignment and native-neighborhood distillation.
+"""Frozen-encoder alignment and visual-neighborhood distillation.
 
 Only COCO/Flickr train and validation caches are read. Incomplete runs restart
 from their fixed seed; completed runs are reused only when all fingerprints
-match. Selection requires the entire six-variant, three-seed matrix.
+match.
 """
 from __future__ import annotations
 
@@ -18,16 +18,13 @@ import torch
 from safetensors.torch import save_file
 from torch.nn import functional as F
 
-import research_train as round1
-from research_train import alignment_loss, score_development
-from smolbge_image_embedding import modeling
-from smolbge_image_embedding.modeling import VisionProjector, default_device
+import alignment
+from alignment import alignment_loss, score_development
+import model
+from model import VisionProjector, default_device
 
 
-VARIANTS = (
-    "clip_align", "clip_geometry", "siglip2_align", "siglip2_geometry",
-    "qwen_align", "qwen_geometry",
-)
+VARIANTS = ("qwen_geometry",)
 SEEDS = (42, 43, 44)
 CACHE_COUNTS = {"coco_train": 4000, "coco_validation": 500,
                 "flickr8k_train": 6000, "flickr8k_validation": 1000}
@@ -74,7 +71,7 @@ def geometry_loss(student: torch.Tensor, teacher: torch.Tensor, temperature: flo
 
 
 def training_loss(projected, text, native_features, use_geometry: bool):
-    """Return (total, unchanged_round1_alignment, unweighted_geometry)."""
+    """Return total, alignment and unweighted geometry losses."""
     alignment = alignment_loss(projected, text, "multipositive")
     geometry = geometry_loss(projected, native_features, GEOMETRY_TEMPERATURE) if use_geometry else projected.sum() * 0.0
     return alignment + GEOMETRY_WEIGHT * geometry, alignment, geometry
@@ -110,7 +107,7 @@ def load_encoder_data(root: Path, encoder: str) -> dict:
     loaded, data_hashes, metadata_hashes = {}, {}, {}
     for name, count in CACHE_COUNTS.items():
         path = root / encoder / f"{name}.npz"
-        loaded[name] = validate_cache(round1.read_cache(path), f"{encoder}/{name}", count)
+        loaded[name] = validate_cache(alignment.read_cache(path), f"{encoder}/{name}", count)
         data_hashes[f"{encoder}/{name}.npz"] = sha256(path)
         if path.with_suffix(".json").exists():
             metadata_hashes[f"{encoder}/{name}.json"] = sha256(path.with_suffix(".json"))
@@ -137,7 +134,7 @@ def check_same_labels(reference: dict, candidate: dict) -> None:
 
 
 def validate_resume_config(recorded: dict, expected: dict) -> None:
-    """Strict guard includes imported Round1 loss and projector implementation."""
+    """Guard against a changed loss or projector implementation."""
     if recorded != expected:
         changed = sorted(key for key in recorded.keys() | expected.keys() if recorded.get(key) != expected.get(key))
         raise RuntimeError(f"Stale run configuration ({', '.join(changed)}); use a new output directory")
@@ -164,7 +161,6 @@ def run_config(variant: str, seed: int, data: dict, fingerprints: dict, device: 
         "train_sizes": [4000, 6000], "development_sizes": {"coco": 500, "flickr8k": 1000},
         "development_selection": "macro actual-caption t2i R@1; COCO+Flickr8k",
         "teacher": "detached native image-only representation; no query input",
-        "encoder_comparison_scope": "system/representation comparison; Qwen also changes full VLM processing",
         "device": str(device), "torch": torch.__version__, "numpy": np.__version__,
         "data_sha256": data["data_sha256"], "cache_metadata_sha256": data["cache_metadata_sha256"],
         **fingerprints,
@@ -280,18 +276,18 @@ def write_selection_if_complete(output: Path, expected_configs: dict) -> dict | 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--cache", type=Path, default=Path("artifacts/research/round2/cache"))
-    parser.add_argument("--output", type=Path, default=Path("artifacts/research/round2/runs"))
-    parser.add_argument("--protocol", type=Path, default=Path("research/round2/PROTOCOL.md"))
+    parser.add_argument("--cache", type=Path, default=Path("cache"))
+    parser.add_argument("--output", type=Path, default=Path("runs"))
+    parser.add_argument("--protocol", type=Path, default=Path("research/PROTOCOL.md"))
     parser.add_argument("--variants", nargs="+", choices=VARIANTS, default=list(VARIANTS))
     parser.add_argument("--seeds", type=int, nargs="+", choices=SEEDS, default=list(SEEDS))
     parser.add_argument("--device", choices=("auto", "cpu", "mps", "cuda"), default="auto")
     args = parser.parse_args()
-    device = default_device() if args.device == "auto" else torch.device(args.device)
+    device = torch.device(default_device() if args.device == "auto" else args.device)
     torch.set_num_threads(4)
     fingerprints = {"protocol_sha256": sha256(args.protocol), "trainer_sha256": sha256(Path(__file__)),
-                    "dependencies_sha256": {"research_train.py": sha256(Path(round1.__file__)),
-                                            "modeling.py": sha256(Path(modeling.__file__))}}
+                    "dependencies_sha256": {"alignment.py": sha256(Path(alignment.__file__)),
+                                            "model.py": sha256(Path(model.__file__))}}
     loaded, expected_configs = {}, {}
 
     def data_for(encoder):

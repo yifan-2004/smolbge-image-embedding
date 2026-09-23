@@ -1,15 +1,11 @@
 {
   "task": "direct image embeddings aligned with frozen BGE text vectors",
   "metric": "exact cosine retrieval, image-balanced Recall@1",
-  "historical_regression": {
+  "regression": {
     "coco": {
       "image_candidates": 500,
       "text_queries": 2500,
-      "v0": {
-        "text_to_image": 0.6076,
-        "image_to_text": 0.68
-      },
-      "v2_seed42": {
+      "model": {
         "text_to_image": 0.67,
         "image_to_text": 0.76
       }
@@ -17,11 +13,7 @@
     "flickr8k": {
       "image_candidates": 1089,
       "text_queries": 5443,
-      "v0": {
-        "text_to_image": 0.44674012855831036,
-        "image_to_text": 0.45362718089990817
-      },
-      "v2_seed42": {
+      "model": {
         "text_to_image": 0.6813131313131313,
         "image_to_text": 0.7355371900826446
       }
@@ -29,11 +21,7 @@
     "docci": {
       "image_candidates": 500,
       "text_queries": 500,
-      "v0": {
-        "text_to_image": 0.434,
-        "image_to_text": 0.468
-      },
-      "v2_seed42": {
+      "model": {
         "text_to_image": 0.57,
         "image_to_text": 0.592
       }
@@ -46,7 +34,7 @@
     "text_queries": 500,
     "image_disjoint_from_training_and_development": true,
     "manifest_sha256": "1806380936ea0c13d9bf9d6afccbf8d9d7f520902485cfd4984e80a4a39e7c9b",
-    "v2_seed42": {
+    "model": {
       "text_to_image": 0.632,
       "image_to_text": 0.576
     }

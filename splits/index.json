@@ -148,7 +148,7 @@
           "split": "sealed_test",
           "image_sha256": "b4f1012183b47482a31955ac38bbad9b7711b018ff20e2cb60b355033f323dc6",
           "overlap_with": "coco:110449",
-          "reason": "Exact image bytes already used in legacy COCO training"
+          "reason": "Exact image bytes already used in COCO training"
         }
       ]
     },

@@ -35,8 +35,7 @@ class ImageEmbeddingModel:
 
     Query text uses CLS pooling, 128 tokens and no prefix, matching the study.
     The model repository bundles Qwen, the adapter, and BGE. Optional native
-    methods are diagnostic and
-    return the backbone's own space, which is NOT compatible with BGE.
+    feature methods return the backbone's space, which is not BGE-compatible.
     """
 
     def __init__(self, directory, device=None, cache_dir=None, local_files_only=False):
@@ -63,17 +62,15 @@ class ImageEmbeddingModel:
 
     @classmethod
     def from_pretrained(cls, model="yifanouyang/smolbge-image-embedding", *, revision=None,
-                        subfolder="v2", device=None, cache_dir=None, local_files_only=False):
+                        device=None, cache_dir=None, local_files_only=False):
         root = Path(model)
-        if root.is_dir():
-            if not (root / "adapter_config.json").is_file():
-                root = root / subfolder
-        else:
+        if not root.is_dir():
             if isinstance(model, Path) or str(model).startswith(("/", ".", "~")):
                 raise FileNotFoundError(model)
             root = Path(snapshot_download(str(model), revision=revision, cache_dir=cache_dir,
                         local_files_only=local_files_only,
-                        allow_patterns=[f"{subfolder}/*", f"{subfolder}/**"])) / subfolder
+                        allow_patterns=["adapter_config.json", "projector.safetensors",
+                                        "base_models/qwen/**", "base_models/bge/**"]))
         if not (root / "adapter_config.json").is_file():
             raise FileNotFoundError(f"Model adapter_config.json is missing: {root}")
         return cls(root, device, cache_dir, local_files_only)

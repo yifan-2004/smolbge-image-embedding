@@ -139,7 +139,7 @@ def train(args):
     config = json.loads((ROOT / "adapter_config.json").read_text())
     environment = os.environ.copy()
     environment["PYTHONPATH"] = os.pathsep.join([str(ROOT), str(ROOT / "research_code")])
-    subprocess.run([sys.executable, "-m", "research_code.research_round2_train", "--cache", str(args.cache),
+    subprocess.run([sys.executable, "-m", "research_code.train_adapter", "--cache", str(args.cache),
         "--output", str(args.runs), "--variants", config["selection"]["variant"],
         "--seeds", *map(str, args.seeds), "--device", args.device], cwd=ROOT, env=environment, check=True)
 
@@ -150,7 +150,7 @@ def evaluate(args):
     from safetensors.torch import load_file
     from research_metrics import retrieval_metrics
     config = json.loads((ROOT / "adapter_config.json").read_text())
-    result = {"role": "custom previously observed regression splits", "models": {}}
+    result = {"role": "custom regression splits", "models": {}}
     for seed in args.seeds:
         variant = config["selection"]["variant"]
         checkpoint = args.runs / f"{variant}_seed{seed}" / "projector.safetensors"
