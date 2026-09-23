@@ -15,12 +15,14 @@ import time
 import zipfile
 
 import numpy as np
+from huggingface_hub import hf_hub_download
 
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "research_code"))
 SPLITS = {"coco": ("train", "validation", "test"),
           "flickr8k": ("train", "val", "sealed_test"), "docci": ("dev", "sealed_test")}
 ALIASES = {"val": "validation", "dev": "validation", "sealed_test": "test"}
+MODEL_ID = "yifanouyang/smolbge-image-embedding"
 
 
 def read_rows(path):
@@ -30,6 +32,14 @@ def read_rows(path):
 def sha(path):
     with Path(path).open("rb") as stream:
         return hashlib.file_digest(stream, "sha256").hexdigest()
+
+
+def load_config(model):
+    root = Path(model)
+    path = root / "adapter_config.json" if root.is_dir() else Path(
+        hf_hub_download(repo_id=str(model), filename="adapter_config.json")
+    )
+    return json.loads(path.read_text())
 
 
 def verify_rows(rows, dataset, split):
@@ -91,7 +101,7 @@ def prepare(args):
 
 def cache(args):
     from model import ImageEmbeddingModel
-    model = ImageEmbeddingModel.from_pretrained(ROOT, device=args.device)
+    model = ImageEmbeddingModel.from_pretrained(args.model, device=args.device)
     backbone = model.config["backbone"]
     batch_size = 2 if backbone == "qwen" else 16
     for dataset, splits in SPLITS.items():
@@ -136,7 +146,7 @@ def cache(args):
 
 
 def train(args):
-    config = json.loads((ROOT / "adapter_config.json").read_text())
+    config = load_config(args.model)
     environment = os.environ.copy()
     environment["PYTHONPATH"] = os.pathsep.join([str(ROOT), str(ROOT / "research_code")])
     subprocess.run([sys.executable, "-m", "research_code.train_adapter", "--cache", str(args.cache),
@@ -149,7 +159,7 @@ def evaluate(args):
     from model import VisionProjector
     from safetensors.torch import load_file
     from research_metrics import retrieval_metrics
-    config = json.loads((ROOT / "adapter_config.json").read_text())
+    config = load_config(args.model)
     result = {"role": "custom regression splits", "models": {}}
     for seed in args.seeds:
         variant = config["selection"]["variant"]
@@ -178,8 +188,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", choices=["all", "prepare", "cache", "train", "evaluate"], default="all")
     parser.add_argument("--data", type=Path, default=ROOT / "data")
-    parser.add_argument("--cache", type=Path, default=ROOT / "artifacts/cache")
+    parser.add_argument("--cache", type=Path, default=ROOT / "cache")
     parser.add_argument("--runs", type=Path, default=ROOT / "runs")
+    parser.add_argument("--model", default=MODEL_ID, help="Hugging Face model ID or downloaded model directory")
     parser.add_argument("--coco-images", type=Path)
     parser.add_argument("--coco-captions", type=Path)
     parser.add_argument("--seeds", type=int, nargs="+", choices=[42, 43, 44], default=[42])
@@ -194,7 +205,7 @@ def main():
         for stage in ("prepare", "cache", "train", "evaluate"):
             command = [sys.executable, str(Path(__file__)), "--stage", stage, "--device", args.device,
                        "--data", str(args.data), "--cache", str(args.cache), "--runs", str(args.runs),
-                       "--seeds", *map(str, args.seeds)]
+                       "--seeds", *map(str, args.seeds), "--model", args.model]
             if args.coco_images:
                 command += ["--coco-images", str(args.coco_images)]
             if args.coco_captions:
