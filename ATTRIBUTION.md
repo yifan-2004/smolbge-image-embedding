@@ -8,6 +8,8 @@
   262,144 and sequence length at 8,192; it is not the official full-resolution
   leaderboard configuration. Qwen is already retrieval-trained.
 - [BGE-small-en-v1.5](https://huggingface.co/BAAI/bge-small-en-v1.5), BAAI.
+- [SmolVLM2-500M-Video-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct),
+  Hugging Face; used only for the comparison systems, not bundled with this model.
 
 The release bundles the exact pinned Qwen and BGE checkpoints under
 `base_models/`, alongside our trained adapter. Qwen remains Apache-2.0 and

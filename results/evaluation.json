@@ -5,26 +5,41 @@
     "coco": {
       "image_candidates": 500,
       "text_queries": 2500,
+      "smolvlm_bge_adapter": {
+        "text_to_image": 0.6076,
+        "image_to_text": 0.68
+      },
       "model": {
         "text_to_image": 0.67,
         "image_to_text": 0.76
-      }
+      },
+      "text_to_image_gain_pp": 6.24
     },
     "flickr8k": {
       "image_candidates": 1089,
       "text_queries": 5443,
+      "smolvlm_bge_adapter": {
+        "text_to_image": 0.44674012855831036,
+        "image_to_text": 0.45362718089990817
+      },
       "model": {
         "text_to_image": 0.6813131313131313,
         "image_to_text": 0.7355371900826446
-      }
+      },
+      "text_to_image_gain_pp": 23.457300275482098
     },
     "docci": {
       "image_candidates": 500,
       "text_queries": 500,
+      "smolvlm_bge_adapter": {
+        "text_to_image": 0.434,
+        "image_to_text": 0.468
+      },
       "model": {
         "text_to_image": 0.57,
         "image_to_text": 0.592
-      }
+      },
+      "text_to_image_gain_pp": 13.6
     }
   },
   "confirmation": {
