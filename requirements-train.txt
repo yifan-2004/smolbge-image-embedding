@@ -1,0 +1,3 @@
+-r requirements.txt
+pyarrow>=18
+pytest>=8

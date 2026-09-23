@@ -1,0 +1,6954 @@
+{
+  "protocol": {
+    "images": 96,
+    "repeats": 3,
+    "batch_size": 1,
+    "ordering": "random image order and random method order per image/repeat",
+    "includes": "local file decode, preprocessing, transfers, forward, numpy output",
+    "excludes": "downloads, model loading, index search, RAG answer generation",
+    "hardware": "withheld by owner; results describe one local run"
+  },
+  "summary_ms": {
+    "released_v0": {
+      "mean_ms": 61.236229725182056,
+      "median_ms": 61.03070802055299,
+      "p95_ms": 84.10056647844611,
+      "calls": 288
+    },
+    "qwen_geometry": {
+      "mean_ms": 307.9201037451437,
+      "median_ms": 300.09706248529255,
+      "p95_ms": 448.38931196136394,
+      "calls": 288
+    },
+    "caption_then_bge": {
+      "mean_ms": 571.9895328095137,
+      "median_ms": 549.3283334653825,
+      "p95_ms": 834.6913290442894,
+      "calls": 288
+    }
+  },
+  "records": [
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03340",
+      "seconds": 0.227202833048068
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03340",
+      "seconds": 0.041533916955813766
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03340",
+      "seconds": 0.49881050002295524
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03662",
+      "seconds": 0.22882254200521857
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03662",
+      "seconds": 0.35352875001262873
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03662",
+      "seconds": 0.0529669999377802
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 304291,
+      "seconds": 0.043865749961696565
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 304291,
+      "seconds": 0.33076575002633035
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 304291,
+      "seconds": 0.26016362500377
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2084103826_ffd76b1e3e",
+      "seconds": 0.038048709044232965
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2084103826_ffd76b1e3e",
+      "seconds": 0.3308295840397477
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2084103826_ffd76b1e3e",
+      "seconds": 0.16877979191485792
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 265777,
+      "seconds": 0.275044749956578
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 265777,
+      "seconds": 0.04429312492720783
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 265777,
+      "seconds": 0.36061454203445464
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3544793763_b38546a5e8",
+      "seconds": 0.04233033291529864
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3544793763_b38546a5e8",
+      "seconds": 0.40707537496928126
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3544793763_b38546a5e8",
+      "seconds": 0.21725858305580914
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3332467180_d72f9b067d",
+      "seconds": 0.042154124937951565
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3332467180_d72f9b067d",
+      "seconds": 0.18063691700808704
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3332467180_d72f9b067d",
+      "seconds": 0.402970791910775
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 1268,
+      "seconds": 0.04077487497124821
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 1268,
+      "seconds": 0.2614148330176249
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 1268,
+      "seconds": 0.35890954197384417
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3050114829_18bc5a6d7c",
+      "seconds": 0.03481508290860802
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3050114829_18bc5a6d7c",
+      "seconds": 0.12966508395038545
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3050114829_18bc5a6d7c",
+      "seconds": 0.3457027080003172
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:241031254_0c6f30e3d1",
+      "seconds": 0.34236641705501825
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:241031254_0c6f30e3d1",
+      "seconds": 0.040638000005856156
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:241031254_0c6f30e3d1",
+      "seconds": 0.17479208298027515
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 214224,
+      "seconds": 0.26124020805582404
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 214224,
+      "seconds": 0.9106956670293584
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 214224,
+      "seconds": 0.04115929105319083
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 55167,
+      "seconds": 0.041888041072525084
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 55167,
+      "seconds": 0.42739475006237626
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 55167,
+      "seconds": 0.20761616702657193
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 418961,
+      "seconds": 0.04129258403554559
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 418961,
+      "seconds": 0.26281004201155156
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 418961,
+      "seconds": 0.4202421250520274
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 120572,
+      "seconds": 0.04045629198662937
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 120572,
+      "seconds": 0.2624390840064734
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 120572,
+      "seconds": 0.40534720791038126
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2521938720_911ac092f7",
+      "seconds": 0.04098550009075552
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2521938720_911ac092f7",
+      "seconds": 0.401440666988492
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2521938720_911ac092f7",
+      "seconds": 0.21288599993567914
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2538477523_1da77eb11c",
+      "seconds": 0.17925141705200076
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2538477523_1da77eb11c",
+      "seconds": 0.04056466603651643
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2538477523_1da77eb11c",
+      "seconds": 0.3242882499471307
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_00928",
+      "seconds": 0.04373508307617158
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_00928",
+      "seconds": 0.23118195799179375
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_00928",
+      "seconds": 0.34648758301045746
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3155501473_510f9c9f6b",
+      "seconds": 0.20310779102146626
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3155501473_510f9c9f6b",
+      "seconds": 0.430138458032161
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3155501473_510f9c9f6b",
+      "seconds": 0.04071500001009554
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1370615506_2b96105ca3",
+      "seconds": 0.48462324996944517
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1370615506_2b96105ca3",
+      "seconds": 0.04024724999908358
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1370615506_2b96105ca3",
+      "seconds": 0.17476612504106015
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 305695,
+      "seconds": 0.21590820793062449
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 305695,
+      "seconds": 0.041785749956034124
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 305695,
+      "seconds": 0.3209043750539422
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01929",
+      "seconds": 0.23154633399099112
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01929",
+      "seconds": 0.04047591704875231
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01929",
+      "seconds": 0.4761722079711035
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04094",
+      "seconds": 0.23691220907494426
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04094",
+      "seconds": 0.04183762497268617
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04094",
+      "seconds": 0.35943691700231284
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02312",
+      "seconds": 0.043374166009016335
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02312",
+      "seconds": 0.23468058300204575
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02312",
+      "seconds": 0.3309388749767095
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01635",
+      "seconds": 0.04307841707486659
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01635",
+      "seconds": 0.3800274580717087
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01635",
+      "seconds": 0.22808408399578184
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01124",
+      "seconds": 0.2460549999959767
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01124",
+      "seconds": 0.057838166947476566
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01124",
+      "seconds": 0.33616987499408424
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1408958345_68eea9a4e4",
+      "seconds": 0.3694561670999974
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1408958345_68eea9a4e4",
+      "seconds": 0.04084033297840506
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1408958345_68eea9a4e4",
+      "seconds": 0.18787254206836224
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 20571,
+      "seconds": 0.26601441600359976
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 20571,
+      "seconds": 0.36403066699858755
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 20571,
+      "seconds": 0.04907362500671297
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3607405494_0df89110a6",
+      "seconds": 0.1810751670273021
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3607405494_0df89110a6",
+      "seconds": 0.32905395794659853
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3607405494_0df89110a6",
+      "seconds": 0.03961262491066009
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03905",
+      "seconds": 0.05157795804552734
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03905",
+      "seconds": 0.3701353749493137
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03905",
+      "seconds": 0.24030537495855242
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 514979,
+      "seconds": 0.042228707927279174
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 514979,
+      "seconds": 0.291213458054699
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 514979,
+      "seconds": 0.2652820000657812
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2718049631_e7aa74cb9b",
+      "seconds": 0.1765069579705596
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2718049631_e7aa74cb9b",
+      "seconds": 0.37607087497599423
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2718049631_e7aa74cb9b",
+      "seconds": 0.04208495805505663
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3653764864_225958c9c1",
+      "seconds": 0.19613212498370558
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3653764864_225958c9c1",
+      "seconds": 0.040943457977846265
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3653764864_225958c9c1",
+      "seconds": 0.3413520000176504
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02235",
+      "seconds": 0.23349966702517122
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02235",
+      "seconds": 0.6060627090046182
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02235",
+      "seconds": 0.04642066708765924
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1255504166_f2437febcb",
+      "seconds": 0.17994845903012902
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1255504166_f2437febcb",
+      "seconds": 0.04108708305284381
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1255504166_f2437febcb",
+      "seconds": 0.3363042090786621
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01430",
+      "seconds": 0.038653125055134296
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01430",
+      "seconds": 0.306568791042082
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01430",
+      "seconds": 0.23880762502085418
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 414676,
+      "seconds": 0.046490291017107666
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 414676,
+      "seconds": 0.37909762491472065
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 414676,
+      "seconds": 0.29102458409033716
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04029",
+      "seconds": 0.24830329196993262
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04029",
+      "seconds": 0.37287695799022913
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04029",
+      "seconds": 0.0440012919716537
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3211289105_e0360a9c7f",
+      "seconds": 0.04451499995775521
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3211289105_e0360a9c7f",
+      "seconds": 0.23600554198492318
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3211289105_e0360a9c7f",
+      "seconds": 0.43465162499342114
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3163477256_073605e06e",
+      "seconds": 0.5481005839537829
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3163477256_073605e06e",
+      "seconds": 0.17654820811003447
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3163477256_073605e06e",
+      "seconds": 0.04598962503951043
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2455528149_6c3477fd33",
+      "seconds": 0.046113209100440145
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2455528149_6c3477fd33",
+      "seconds": 0.21606604102998972
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2455528149_6c3477fd33",
+      "seconds": 0.37964879209175706
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:260392825_ea61660633",
+      "seconds": 0.040724874939769506
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:260392825_ea61660633",
+      "seconds": 0.4569196249358356
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:260392825_ea61660633",
+      "seconds": 0.18603875010740012
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04557",
+      "seconds": 0.26911087497137487
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04557",
+      "seconds": 0.04903920891229063
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04557",
+      "seconds": 0.40098062495235354
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 36539,
+      "seconds": 0.3787312919739634
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 36539,
+      "seconds": 0.041861208039335907
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 36539,
+      "seconds": 0.3295303330523893
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 270297,
+      "seconds": 0.3170371250016615
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 270297,
+      "seconds": 0.04924695799127221
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 270297,
+      "seconds": 0.48338762496132404
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03290",
+      "seconds": 0.35703437495976686
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03290",
+      "seconds": 0.28769362496677786
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03290",
+      "seconds": 0.046271624974906445
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:421322723_3470543368",
+      "seconds": 0.21870445902459323
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:421322723_3470543368",
+      "seconds": 0.048336958047002554
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:421322723_3470543368",
+      "seconds": 0.6069801249541342
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02851",
+      "seconds": 0.3569858750561252
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02851",
+      "seconds": 0.2562278750119731
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02851",
+      "seconds": 0.0480807910207659
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 224337,
+      "seconds": 0.35238129098434
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 224337,
+      "seconds": 0.34639899991452694
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 224337,
+      "seconds": 0.05264916701707989
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02645",
+      "seconds": 0.05950470792595297
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02645",
+      "seconds": 0.43243062507826835
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02645",
+      "seconds": 0.24286087497603148
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3744832122_2f4febdff6",
+      "seconds": 0.05094654194545001
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3744832122_2f4febdff6",
+      "seconds": 0.4441981250420213
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3744832122_2f4febdff6",
+      "seconds": 0.21390874998178333
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02738",
+      "seconds": 0.30323683307506144
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02738",
+      "seconds": 0.05119258305057883
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02738",
+      "seconds": 0.37367016600910574
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3046259614_614394e024",
+      "seconds": 0.5356804169714451
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3046259614_614394e024",
+      "seconds": 0.19112370803486556
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3046259614_614394e024",
+      "seconds": 0.04644412500783801
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03398",
+      "seconds": 0.055076458025723696
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03398",
+      "seconds": 0.4650169999804348
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03398",
+      "seconds": 0.2588295000605285
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03992",
+      "seconds": 0.5260343749541789
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03992",
+      "seconds": 0.06088045903015882
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03992",
+      "seconds": 0.32069358392618597
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02439",
+      "seconds": 0.3275213750312105
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02439",
+      "seconds": 0.5299196250271052
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02439",
+      "seconds": 0.04740904190111905
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2772084628_c0ae29d87a",
+      "seconds": 0.057499291957356036
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2772084628_c0ae29d87a",
+      "seconds": 0.42950004199519753
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2772084628_c0ae29d87a",
+      "seconds": 0.30494349997024983
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 474039,
+      "seconds": 0.058753374963998795
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 474039,
+      "seconds": 0.48075170791707933
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 474039,
+      "seconds": 0.34482850006315857
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04813",
+      "seconds": 0.33221420797053725
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04813",
+      "seconds": 0.05803354096133262
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04813",
+      "seconds": 0.7539067500038072
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3466891862_9afde75568",
+      "seconds": 0.4335545419016853
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3466891862_9afde75568",
+      "seconds": 0.05335387494415045
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3466891862_9afde75568",
+      "seconds": 0.23735670803580433
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3540155303_08225a4567",
+      "seconds": 0.2656804999569431
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3540155303_08225a4567",
+      "seconds": 0.06151708401739597
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3540155303_08225a4567",
+      "seconds": 0.4589064579922706
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03987",
+      "seconds": 0.5229362919926643
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03987",
+      "seconds": 0.27915033302269876
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03987",
+      "seconds": 0.05834462505299598
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 95155,
+      "seconds": 0.05953324993606657
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 95155,
+      "seconds": 0.42106062499806285
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 95155,
+      "seconds": 0.3494125830475241
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:159712188_d530dd478c",
+      "seconds": 0.08058541594073176
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:159712188_d530dd478c",
+      "seconds": 0.7863137499662116
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:159712188_d530dd478c",
+      "seconds": 0.23382712504826486
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03228",
+      "seconds": 0.5625153329456225
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03228",
+      "seconds": 0.311420000041835
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03228",
+      "seconds": 0.07316495792474598
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:90011335_cfdf9674c2",
+      "seconds": 0.3331212089397013
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:90011335_cfdf9674c2",
+      "seconds": 0.08042970800306648
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:90011335_cfdf9674c2",
+      "seconds": 0.604997624992393
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03105",
+      "seconds": 0.06853587494697422
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03105",
+      "seconds": 0.4458074999274686
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03105",
+      "seconds": 0.8112660839688033
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 304404,
+      "seconds": 0.5561657079961151
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 304404,
+      "seconds": 0.3951772500295192
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 304404,
+      "seconds": 0.07492120796814561
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01474",
+      "seconds": 0.07402420800644904
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01474",
+      "seconds": 0.4117437079548836
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01474",
+      "seconds": 0.7812877079704776
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 404249,
+      "seconds": 0.5617785410722718
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 404249,
+      "seconds": 0.3347472089808434
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 404249,
+      "seconds": 0.07660945795942098
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_00181",
+      "seconds": 0.09828733291942626
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_00181",
+      "seconds": 0.38304524996783584
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_00181",
+      "seconds": 0.7144355409545824
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01011",
+      "seconds": 0.05792129097972065
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01011",
+      "seconds": 0.48841479094699025
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01011",
+      "seconds": 0.2968667499953881
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01673",
+      "seconds": 0.08745804196223617
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01673",
+      "seconds": 0.8798568340716884
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_01673",
+      "seconds": 0.25408133305609226
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 351823,
+      "seconds": 0.08159841597080231
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 351823,
+      "seconds": 0.6122392499819398
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 351823,
+      "seconds": 0.37285866599995643
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 433103,
+      "seconds": 0.7742285409476608
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 433103,
+      "seconds": 0.4462218330008909
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 433103,
+      "seconds": 0.08166725002229214
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 373315,
+      "seconds": 0.7860887499991804
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 373315,
+      "seconds": 0.06921429198700935
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 373315,
+      "seconds": 0.37522608297877014
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 213224,
+      "seconds": 0.6873782499460503
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 213224,
+      "seconds": 0.06897545792162418
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 213224,
+      "seconds": 0.40456462500151247
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04097",
+      "seconds": 0.39095358399208635
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04097",
+      "seconds": 0.6602842920692638
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04097",
+      "seconds": 0.07214704190846533
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02995",
+      "seconds": 0.8412343750242144
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02995",
+      "seconds": 0.3402119589736685
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_02995",
+      "seconds": 0.11641562497243285
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 43816,
+      "seconds": 0.49405629094690084
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 43816,
+      "seconds": 1.1085129579296336
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 43816,
+      "seconds": 0.0640472499653697
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03380",
+      "seconds": 0.0633705829968676
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03380",
+      "seconds": 0.32965566706843674
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_03380",
+      "seconds": 0.5768113329540938
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 385997,
+      "seconds": 0.2973535000346601
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 385997,
+      "seconds": 0.07693429209757596
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 385997,
+      "seconds": 0.7777287499047816
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 180798,
+      "seconds": 0.2358094999799505
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 180798,
+      "seconds": 0.06071962497662753
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 180798,
+      "seconds": 0.6885679169790819
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2082005167_a0d6a70020",
+      "seconds": 0.4803772500017658
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2082005167_a0d6a70020",
+      "seconds": 0.2810571670997888
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2082005167_a0d6a70020",
+      "seconds": 0.06877229199744761
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 4134,
+      "seconds": 0.0757549999980256
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 4134,
+      "seconds": 0.5457583339884877
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 4134,
+      "seconds": 0.3390495829517022
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:297169473_d3974e0275",
+      "seconds": 0.43059516604989767
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:297169473_d3974e0275",
+      "seconds": 0.051650832989253104
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:297169473_d3974e0275",
+      "seconds": 0.21046283305622637
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 405249,
+      "seconds": 0.36411950003821403
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 405249,
+      "seconds": 0.7101892919745296
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 405249,
+      "seconds": 0.09417037502862513
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2393264648_a280744f97",
+      "seconds": 0.6803188329795375
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2393264648_a280744f97",
+      "seconds": 0.18301091704051942
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2393264648_a280744f97",
+      "seconds": 0.05310508399270475
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 168974,
+      "seconds": 0.2939428329700604
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 168974,
+      "seconds": 0.09289045899640769
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 168974,
+      "seconds": 0.8017640000907704
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2976537455_f3988c2d46",
+      "seconds": 0.05911366594955325
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2976537455_f3988c2d46",
+      "seconds": 0.2533403330016881
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2976537455_f3988c2d46",
+      "seconds": 1.1243101250147447
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 124636,
+      "seconds": 0.07174554199445993
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 124636,
+      "seconds": 0.399468082934618
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 124636,
+      "seconds": 0.6650995410745963
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 107094,
+      "seconds": 0.551793041988276
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 107094,
+      "seconds": 0.046460875077173114
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 107094,
+      "seconds": 0.4095756250899285
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 159282,
+      "seconds": 0.4584846659563482
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 159282,
+      "seconds": 0.48286916594952345
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 159282,
+      "seconds": 0.04621566692367196
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2319808437_bbbdc317c0",
+      "seconds": 0.22286829201038927
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2319808437_bbbdc317c0",
+      "seconds": 0.4609609170584008
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2319808437_bbbdc317c0",
+      "seconds": 0.06165108399000019
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 79588,
+      "seconds": 0.10520862496923655
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 79588,
+      "seconds": 1.4435982920695096
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "coco",
+      "image_id": 79588,
+      "seconds": 0.2951466669328511
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04736",
+      "seconds": 0.6021696659736335
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04736",
+      "seconds": 0.07258649996947497
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "docci",
+      "image_id": "docci:test_04736",
+      "seconds": 0.4503853329224512
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1456630952_dd4778a48f",
+      "seconds": 0.5880588750587776
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1456630952_dd4778a48f",
+      "seconds": 0.053549209027551115
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 0,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1456630952_dd4778a48f",
+      "seconds": 0.2196422090055421
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01673",
+      "seconds": 0.2714017080143094
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01673",
+      "seconds": 0.06452620890922844
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01673",
+      "seconds": 0.7191032079281285
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03340",
+      "seconds": 0.7361006250139326
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03340",
+      "seconds": 0.27918162499554455
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03340",
+      "seconds": 0.0666074170731008
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 180798,
+      "seconds": 0.35119570803362876
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 180798,
+      "seconds": 0.6415720420191064
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 180798,
+      "seconds": 0.05340658302884549
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3544793763_b38546a5e8",
+      "seconds": 0.06496929109562188
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3544793763_b38546a5e8",
+      "seconds": 0.758371957927011
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3544793763_b38546a5e8",
+      "seconds": 0.32213799993041903
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03662",
+      "seconds": 0.10348099994007498
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03662",
+      "seconds": 0.3986872499808669
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03662",
+      "seconds": 0.7059726669685915
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02312",
+      "seconds": 0.0669418330071494
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02312",
+      "seconds": 0.4998977080686018
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02312",
+      "seconds": 0.28184379101730883
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 270297,
+      "seconds": 0.07407833298202604
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 270297,
+      "seconds": 0.4508667499758303
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 270297,
+      "seconds": 0.6936654159799218
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2455528149_6c3477fd33",
+      "seconds": 0.2809978330042213
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2455528149_6c3477fd33",
+      "seconds": 0.06833625002764165
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2455528149_6c3477fd33",
+      "seconds": 0.5801672909874469
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:297169473_d3974e0275",
+      "seconds": 0.0558889580424875
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:297169473_d3974e0275",
+      "seconds": 0.44317941705230623
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:297169473_d3974e0275",
+      "seconds": 0.21349316707346588
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_00181",
+      "seconds": 0.0716865420108661
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_00181",
+      "seconds": 0.3771243750816211
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_00181",
+      "seconds": 0.5709830418927595
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 514979,
+      "seconds": 0.04978933301754296
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 514979,
+      "seconds": 0.3408502920065075
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 514979,
+      "seconds": 0.4825807500164956
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 418961,
+      "seconds": 0.5432982079219073
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 418961,
+      "seconds": 0.05738895805552602
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 418961,
+      "seconds": 0.49520116695202887
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:260392825_ea61660633",
+      "seconds": 0.0734501249389723
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:260392825_ea61660633",
+      "seconds": 0.7052067499607801
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:260392825_ea61660633",
+      "seconds": 0.2027364580426365
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3540155303_08225a4567",
+      "seconds": 0.055228708079084754
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3540155303_08225a4567",
+      "seconds": 0.23042554198764265
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3540155303_08225a4567",
+      "seconds": 0.49159212491940707
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3211289105_e0360a9c7f",
+      "seconds": 0.061682292027398944
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3211289105_e0360a9c7f",
+      "seconds": 0.6073470410192385
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3211289105_e0360a9c7f",
+      "seconds": 0.24398858298081905
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 36539,
+      "seconds": 0.07481595792341977
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 36539,
+      "seconds": 0.47758812503889203
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 36539,
+      "seconds": 0.5946552079403773
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3155501473_510f9c9f6b",
+      "seconds": 0.6764315409818664
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3155501473_510f9c9f6b",
+      "seconds": 0.2238102499395609
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3155501473_510f9c9f6b",
+      "seconds": 0.055631374940276146
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03992",
+      "seconds": 0.3638567079324275
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03992",
+      "seconds": 0.6630684999981895
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03992",
+      "seconds": 0.06437691708561033
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1370615506_2b96105ca3",
+      "seconds": 0.06282895896583796
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1370615506_2b96105ca3",
+      "seconds": 0.2886061250464991
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1370615506_2b96105ca3",
+      "seconds": 0.7262400410836563
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:90011335_cfdf9674c2",
+      "seconds": 0.2528857500292361
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:90011335_cfdf9674c2",
+      "seconds": 0.5565705000190064
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:90011335_cfdf9674c2",
+      "seconds": 0.05405283300206065
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2084103826_ffd76b1e3e",
+      "seconds": 0.5499522079480812
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2084103826_ffd76b1e3e",
+      "seconds": 0.051416374975815415
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2084103826_ffd76b1e3e",
+      "seconds": 0.22053008293733
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2521938720_911ac092f7",
+      "seconds": 0.08696437499020249
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2521938720_911ac092f7",
+      "seconds": 0.36522620799951255
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2521938720_911ac092f7",
+      "seconds": 0.6432585840811953
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 433103,
+      "seconds": 0.04838216700591147
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 433103,
+      "seconds": 0.46958166698459536
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 433103,
+      "seconds": 0.3178449999541044
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 265777,
+      "seconds": 0.8005579579621553
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 265777,
+      "seconds": 0.3977514998987317
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 265777,
+      "seconds": 0.07815145805943757
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 79588,
+      "seconds": 1.4565241659292951
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 79588,
+      "seconds": 0.3269567920360714
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 79588,
+      "seconds": 0.07437925005797297
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02439",
+      "seconds": 0.0812172080622986
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02439",
+      "seconds": 0.6700908750062808
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02439",
+      "seconds": 0.2669018750311807
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_00928",
+      "seconds": 0.34038654202595353
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_00928",
+      "seconds": 0.06306554097682238
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_00928",
+      "seconds": 0.5379874999634922
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01011",
+      "seconds": 0.3107942499918863
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01011",
+      "seconds": 0.06472575000952929
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01011",
+      "seconds": 0.6850918750278652
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 124636,
+      "seconds": 0.3730750830145553
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 124636,
+      "seconds": 0.08457037492189556
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 124636,
+      "seconds": 0.6050577081041411
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 55167,
+      "seconds": 0.2747808749554679
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 55167,
+      "seconds": 0.058837666059844196
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 55167,
+      "seconds": 0.6384127089986578
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03398",
+      "seconds": 0.0585033749230206
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03398",
+      "seconds": 0.39607129199430346
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03398",
+      "seconds": 0.6424522920278832
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01124",
+      "seconds": 0.33608024998102337
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01124",
+      "seconds": 0.0916655829641968
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01124",
+      "seconds": 0.501458749989979
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2393264648_a280744f97",
+      "seconds": 0.5413660419872031
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2393264648_a280744f97",
+      "seconds": 0.16517466597724706
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2393264648_a280744f97",
+      "seconds": 0.047258166945539415
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1255504166_f2437febcb",
+      "seconds": 0.24958916602190584
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1255504166_f2437febcb",
+      "seconds": 0.5054682919289917
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1255504166_f2437febcb",
+      "seconds": 0.058995458064600825
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 168974,
+      "seconds": 0.6257350411033258
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 168974,
+      "seconds": 0.2556646659504622
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 168974,
+      "seconds": 0.06400312494952232
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 159282,
+      "seconds": 0.3860152499983087
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 159282,
+      "seconds": 0.5343980420148
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 159282,
+      "seconds": 0.0706440000794828
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03105",
+      "seconds": 0.7017324579646811
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03105",
+      "seconds": 0.3212930839508772
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03105",
+      "seconds": 0.06762816698756069
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3466891862_9afde75568",
+      "seconds": 0.4910112920915708
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3466891862_9afde75568",
+      "seconds": 0.25188883394002914
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3466891862_9afde75568",
+      "seconds": 0.058990375022403896
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 385997,
+      "seconds": 0.06385204195976257
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 385997,
+      "seconds": 0.3237632500240579
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 385997,
+      "seconds": 0.7194498749449849
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2718049631_e7aa74cb9b",
+      "seconds": 0.6597237919922918
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2718049631_e7aa74cb9b",
+      "seconds": 0.0614355830475688
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2718049631_e7aa74cb9b",
+      "seconds": 0.2396997920004651
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3653764864_225958c9c1",
+      "seconds": 0.06559783406555653
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3653764864_225958c9c1",
+      "seconds": 0.2748858330305666
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3653764864_225958c9c1",
+      "seconds": 0.532691708067432
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1456630952_dd4778a48f",
+      "seconds": 0.06114820798393339
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1456630952_dd4778a48f",
+      "seconds": 0.26222350005991757
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1456630952_dd4778a48f",
+      "seconds": 0.5764419999904931
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 95155,
+      "seconds": 0.05863316706381738
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 95155,
+      "seconds": 0.4614035830600187
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 95155,
+      "seconds": 0.3546152909984812
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03380",
+      "seconds": 0.06537945894524455
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03380",
+      "seconds": 0.3519594590179622
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03380",
+      "seconds": 0.5129839999135584
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3607405494_0df89110a6",
+      "seconds": 0.2176840000320226
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3607405494_0df89110a6",
+      "seconds": 0.5112162500154227
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3607405494_0df89110a6",
+      "seconds": 0.07163870800286531
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 404249,
+      "seconds": 0.455778667004779
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 404249,
+      "seconds": 0.08524679206311703
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 404249,
+      "seconds": 0.661414209054783
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01635",
+      "seconds": 0.3698131670244038
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01635",
+      "seconds": 0.59315145900473
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01635",
+      "seconds": 0.04799895896576345
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2082005167_a0d6a70020",
+      "seconds": 0.06533087498974055
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2082005167_a0d6a70020",
+      "seconds": 0.300428666989319
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2082005167_a0d6a70020",
+      "seconds": 0.5093359580496326
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01929",
+      "seconds": 0.6137897080043331
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01929",
+      "seconds": 0.06213216600008309
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01929",
+      "seconds": 0.37868416705168784
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02851",
+      "seconds": 0.5691517080413178
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02851",
+      "seconds": 0.05872912495397031
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02851",
+      "seconds": 0.33678220794536173
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03905",
+      "seconds": 0.5194238330004737
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03905",
+      "seconds": 0.3543102090479806
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03905",
+      "seconds": 0.08426774991676211
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:421322723_3470543368",
+      "seconds": 0.06752762501128018
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:421322723_3470543368",
+      "seconds": 0.27711845794692636
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:421322723_3470543368",
+      "seconds": 0.7721170840086415
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03987",
+      "seconds": 0.057325624977238476
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03987",
+      "seconds": 0.4988743329886347
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03987",
+      "seconds": 0.46873750002123415
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02235",
+      "seconds": 0.42940083309076726
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02235",
+      "seconds": 0.7505189579678699
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02235",
+      "seconds": 0.04489400004968047
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 405249,
+      "seconds": 0.31116087501868606
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 405249,
+      "seconds": 0.0705470839748159
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 405249,
+      "seconds": 0.549768166965805
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 224337,
+      "seconds": 0.3872851670021191
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 224337,
+      "seconds": 0.05580420792102814
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 224337,
+      "seconds": 0.4961781670572236
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04736",
+      "seconds": 0.061469667009077966
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04736",
+      "seconds": 0.6251166249858215
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04736",
+      "seconds": 0.26889420801308006
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2538477523_1da77eb11c",
+      "seconds": 0.4391258329851553
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2538477523_1da77eb11c",
+      "seconds": 0.24717520910780877
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2538477523_1da77eb11c",
+      "seconds": 0.0720991250127554
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 107094,
+      "seconds": 0.07018091704230756
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 107094,
+      "seconds": 0.596580708050169
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 107094,
+      "seconds": 0.30455612496007234
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 214224,
+      "seconds": 1.1513517079874873
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 214224,
+      "seconds": 0.37641220807563514
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 214224,
+      "seconds": 0.06614537502173334
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 120572,
+      "seconds": 0.08667608292307705
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 120572,
+      "seconds": 0.7268854579888284
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 120572,
+      "seconds": 0.33027995796874166
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 414676,
+      "seconds": 0.07047391694504768
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 414676,
+      "seconds": 0.5708256660727784
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 414676,
+      "seconds": 0.4071628750534728
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 304404,
+      "seconds": 0.445534750004299
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 304404,
+      "seconds": 0.06506745901424438
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 304404,
+      "seconds": 0.5400779170449823
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03290",
+      "seconds": 0.046856916043907404
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03290",
+      "seconds": 0.42854483402334154
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03290",
+      "seconds": 0.31932100001722574
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02995",
+      "seconds": 0.7139459999743849
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02995",
+      "seconds": 0.06711845798417926
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02995",
+      "seconds": 0.36090779199730605
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04557",
+      "seconds": 0.06711233290843666
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04557",
+      "seconds": 0.5819474159507081
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04557",
+      "seconds": 0.30685874994378537
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01430",
+      "seconds": 0.37341037509031594
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01430",
+      "seconds": 0.0621120409341529
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01430",
+      "seconds": 0.5055452910019085
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3163477256_073605e06e",
+      "seconds": 0.7367780409986153
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3163477256_073605e06e",
+      "seconds": 0.21485958399716765
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3163477256_073605e06e",
+      "seconds": 0.0644625419517979
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 1268,
+      "seconds": 0.43754358298610896
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 1268,
+      "seconds": 0.0650414580013603
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 1268,
+      "seconds": 0.5050103329122066
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04813",
+      "seconds": 0.04640550003387034
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04813",
+      "seconds": 0.6992103339871392
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04813",
+      "seconds": 0.2814086249563843
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 43816,
+      "seconds": 0.07329687499441206
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 43816,
+      "seconds": 0.8711977920029312
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 43816,
+      "seconds": 0.4265311660710722
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 20571,
+      "seconds": 0.4675932090030983
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 20571,
+      "seconds": 0.07219245901796967
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 20571,
+      "seconds": 0.5066043339902535
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02738",
+      "seconds": 0.2683290409622714
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02738",
+      "seconds": 0.05866995791438967
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02738",
+      "seconds": 0.4573849170701578
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 304291,
+      "seconds": 0.59647470805794
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 304291,
+      "seconds": 0.062195083941332996
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 304291,
+      "seconds": 0.3863874999806285
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:159712188_d530dd478c",
+      "seconds": 0.31075425003655255
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:159712188_d530dd478c",
+      "seconds": 0.6174182499526069
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:159712188_d530dd478c",
+      "seconds": 0.060916916001588106
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 474039,
+      "seconds": 0.0562058329815045
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 474039,
+      "seconds": 0.5494384589837864
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 474039,
+      "seconds": 0.3404747908934951
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 305695,
+      "seconds": 0.4846644999925047
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 305695,
+      "seconds": 0.30262841703370214
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 305695,
+      "seconds": 0.06539995793718845
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01474",
+      "seconds": 0.3774201669730246
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01474",
+      "seconds": 0.5986609999090433
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_01474",
+      "seconds": 0.04957595805171877
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3046259614_614394e024",
+      "seconds": 0.6990260829916224
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3046259614_614394e024",
+      "seconds": 0.23376387497410178
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3046259614_614394e024",
+      "seconds": 0.05749037500936538
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03228",
+      "seconds": 0.6026582920458168
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03228",
+      "seconds": 0.29876933293417096
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_03228",
+      "seconds": 0.07765075005590916
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3332467180_d72f9b067d",
+      "seconds": 0.06633062497712672
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3332467180_d72f9b067d",
+      "seconds": 0.6443953328998759
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3332467180_d72f9b067d",
+      "seconds": 0.2687287500593811
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:241031254_0c6f30e3d1",
+      "seconds": 0.06300466693937778
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:241031254_0c6f30e3d1",
+      "seconds": 0.5502631249837577
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:241031254_0c6f30e3d1",
+      "seconds": 0.22637124999891967
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3744832122_2f4febdff6",
+      "seconds": 0.2726875840453431
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3744832122_2f4febdff6",
+      "seconds": 0.686926000053063
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3744832122_2f4febdff6",
+      "seconds": 0.05464375007431954
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04097",
+      "seconds": 0.050986916990950704
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04097",
+      "seconds": 0.5431363749084994
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04097",
+      "seconds": 0.29859770904295146
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1408958345_68eea9a4e4",
+      "seconds": 0.5750460419803858
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1408958345_68eea9a4e4",
+      "seconds": 0.05000150005798787
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1408958345_68eea9a4e4",
+      "seconds": 0.2449137499788776
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 4134,
+      "seconds": 0.44955641601700336
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 4134,
+      "seconds": 0.07256095902994275
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 4134,
+      "seconds": 0.502507375087589
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2976537455_f3988c2d46",
+      "seconds": 0.8587773749604821
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2976537455_f3988c2d46",
+      "seconds": 0.3306821669684723
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2976537455_f3988c2d46",
+      "seconds": 0.07445916708093137
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 351823,
+      "seconds": 0.07301991700660437
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 351823,
+      "seconds": 0.46792104095220566
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 351823,
+      "seconds": 0.5070180420298129
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02645",
+      "seconds": 0.07086858293041587
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02645",
+      "seconds": 0.33704520808532834
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_02645",
+      "seconds": 0.5492182079469785
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2772084628_c0ae29d87a",
+      "seconds": 0.06184541597031057
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2772084628_c0ae29d87a",
+      "seconds": 0.4699901669519022
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2772084628_c0ae29d87a",
+      "seconds": 0.2591355419717729
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2319808437_bbbdc317c0",
+      "seconds": 0.534382333047688
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2319808437_bbbdc317c0",
+      "seconds": 0.06433812505565584
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2319808437_bbbdc317c0",
+      "seconds": 0.27542750001884997
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04029",
+      "seconds": 0.39868874999228865
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04029",
+      "seconds": 0.08332608302589506
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04029",
+      "seconds": 0.642003667075187
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04094",
+      "seconds": 0.4942569580161944
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04094",
+      "seconds": 0.2790663749910891
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "docci",
+      "image_id": "docci:test_04094",
+      "seconds": 0.05650687508750707
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 213224,
+      "seconds": 0.44312129204627126
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 213224,
+      "seconds": 0.5495257079601288
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 213224,
+      "seconds": 0.06355374993290752
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3050114829_18bc5a6d7c",
+      "seconds": 0.19102870800998062
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3050114829_18bc5a6d7c",
+      "seconds": 0.04988341697026044
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3050114829_18bc5a6d7c",
+      "seconds": 0.49768533289898187
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 373315,
+      "seconds": 0.05353820894379169
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 373315,
+      "seconds": 0.5762586669297889
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 1,
+      "dataset": "coco",
+      "image_id": 373315,
+      "seconds": 0.4006156249670312
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03340",
+      "seconds": 0.38094041706062853
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03340",
+      "seconds": 0.0659265830181539
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03340",
+      "seconds": 0.6655272499192506
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 20571,
+      "seconds": 0.4788938749115914
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 20571,
+      "seconds": 0.07996041607111692
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 20571,
+      "seconds": 0.5699416249990463
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3544793763_b38546a5e8",
+      "seconds": 0.4999920000554994
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3544793763_b38546a5e8",
+      "seconds": 0.2821197499288246
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3544793763_b38546a5e8",
+      "seconds": 0.08090966707095504
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2393264648_a280744f97",
+      "seconds": 0.05887649999931455
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2393264648_a280744f97",
+      "seconds": 0.6787626669974998
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2393264648_a280744f97",
+      "seconds": 0.16256687499117106
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03380",
+      "seconds": 0.06013308302499354
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03380",
+      "seconds": 0.32363504194654524
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03380",
+      "seconds": 0.5445060830097646
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2521938720_911ac092f7",
+      "seconds": 0.26268345897551626
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2521938720_911ac092f7",
+      "seconds": 0.5820241250330582
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2521938720_911ac092f7",
+      "seconds": 0.055712082888931036
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 159282,
+      "seconds": 0.05472687492147088
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 159282,
+      "seconds": 0.3760018750326708
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 159282,
+      "seconds": 0.529336208011955
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04094",
+      "seconds": 0.0692021669819951
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04094",
+      "seconds": 0.359384624985978
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04094",
+      "seconds": 0.503396375104785
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 414676,
+      "seconds": 0.44945620803628117
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 414676,
+      "seconds": 0.057062999927438796
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 414676,
+      "seconds": 0.3989923340268433
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02851",
+      "seconds": 0.3791687919292599
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02851",
+      "seconds": 0.0700562089914456
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02851",
+      "seconds": 0.5014615419786423
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01929",
+      "seconds": 0.053259207983501256
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01929",
+      "seconds": 0.6197261250345036
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01929",
+      "seconds": 0.4388628749875352
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 55167,
+      "seconds": 0.0814007919980213
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 55167,
+      "seconds": 0.3303549170959741
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 55167,
+      "seconds": 0.6662850830471143
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2084103826_ffd76b1e3e",
+      "seconds": 0.24269008392002434
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2084103826_ffd76b1e3e",
+      "seconds": 0.05849683308042586
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2084103826_ffd76b1e3e",
+      "seconds": 0.4966114159906283
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3050114829_18bc5a6d7c",
+      "seconds": 0.16207700001541525
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3050114829_18bc5a6d7c",
+      "seconds": 0.4903845840599388
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3050114829_18bc5a6d7c",
+      "seconds": 0.040978958015330136
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2772084628_c0ae29d87a",
+      "seconds": 0.49937225005123764
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2772084628_c0ae29d87a",
+      "seconds": 0.3309813749510795
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2772084628_c0ae29d87a",
+      "seconds": 0.083790082950145
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 351823,
+      "seconds": 0.4970294169615954
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 351823,
+      "seconds": 0.31981754198204726
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 351823,
+      "seconds": 0.0612066249595955
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 385997,
+      "seconds": 0.6063488750951365
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 385997,
+      "seconds": 0.055113542010076344
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 385997,
+      "seconds": 0.30978287500329316
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 214224,
+      "seconds": 1.2192327920347452
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 214224,
+      "seconds": 0.49367779202293605
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 214224,
+      "seconds": 0.07633683399762958
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3332467180_d72f9b067d",
+      "seconds": 0.6282431249273941
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3332467180_d72f9b067d",
+      "seconds": 0.04772162507288158
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3332467180_d72f9b067d",
+      "seconds": 0.2620709999464452
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3653764864_225958c9c1",
+      "seconds": 0.06693983299192041
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3653764864_225958c9c1",
+      "seconds": 0.5948040419025347
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3653764864_225958c9c1",
+      "seconds": 0.24327808304224163
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 1268,
+      "seconds": 0.07086708303540945
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 1268,
+      "seconds": 0.567553750006482
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 1268,
+      "seconds": 0.32547304197214544
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04813",
+      "seconds": 0.07004666689317673
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04813",
+      "seconds": 0.8759310829918832
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04813",
+      "seconds": 0.26719479192979634
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02312",
+      "seconds": 0.061952375108376145
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02312",
+      "seconds": 0.35635412496048957
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02312",
+      "seconds": 0.5336670420365408
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 43816,
+      "seconds": 0.06305695802439004
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 43816,
+      "seconds": 0.42672258301172405
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 43816,
+      "seconds": 0.8708521659718826
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 265777,
+      "seconds": 0.36114950000774115
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 265777,
+      "seconds": 0.06831320805940777
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 265777,
+      "seconds": 0.5724573750048876
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:421322723_3470543368",
+      "seconds": 0.6613394169835374
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:421322723_3470543368",
+      "seconds": 0.05766208400018513
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:421322723_3470543368",
+      "seconds": 0.2664172080112621
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03662",
+      "seconds": 0.6848409590311348
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03662",
+      "seconds": 0.08251400000881404
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03662",
+      "seconds": 0.33767600008286536
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04097",
+      "seconds": 0.49774699995759875
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04097",
+      "seconds": 0.27162654197309166
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04097",
+      "seconds": 0.05473070789594203
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3466891862_9afde75568",
+      "seconds": 0.25158754200674593
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3466891862_9afde75568",
+      "seconds": 0.4922185419127345
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3466891862_9afde75568",
+      "seconds": 0.05798183300066739
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04557",
+      "seconds": 0.35442800004966557
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04557",
+      "seconds": 0.06731737498193979
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04557",
+      "seconds": 0.6176894590025768
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 305695,
+      "seconds": 0.31462291593197733
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 305695,
+      "seconds": 0.5251908749341965
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 305695,
+      "seconds": 0.06283812504261732
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:260392825_ea61660633",
+      "seconds": 0.6516131249954924
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:260392825_ea61660633",
+      "seconds": 0.05739383294712752
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:260392825_ea61660633",
+      "seconds": 0.2413657079450786
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04029",
+      "seconds": 0.3669186669867486
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04029",
+      "seconds": 0.5722144169267267
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04029",
+      "seconds": 0.05751075001899153
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3155501473_510f9c9f6b",
+      "seconds": 0.6304534160299227
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3155501473_510f9c9f6b",
+      "seconds": 0.06114450003951788
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3155501473_510f9c9f6b",
+      "seconds": 0.2995831670705229
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02645",
+      "seconds": 0.62623649998568
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02645",
+      "seconds": 0.30250929202884436
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02645",
+      "seconds": 0.09180937497876585
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3046259614_614394e024",
+      "seconds": 0.7802959160180762
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3046259614_614394e024",
+      "seconds": 0.2082582499133423
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3046259614_614394e024",
+      "seconds": 0.061559292022138834
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03105",
+      "seconds": 0.5859187500318512
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03105",
+      "seconds": 0.28829037491232157
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03105",
+      "seconds": 0.0671689169248566
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 224337,
+      "seconds": 0.44037483306601644
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 224337,
+      "seconds": 0.06718050001654774
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 224337,
+      "seconds": 0.46567525004502386
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02738",
+      "seconds": 0.4878241659607738
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02738",
+      "seconds": 0.05108683300204575
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02738",
+      "seconds": 0.3071069159777835
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_00181",
+      "seconds": 0.06752170901745558
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_00181",
+      "seconds": 0.3594338340917602
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_00181",
+      "seconds": 0.5884967499878258
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2976537455_f3988c2d46",
+      "seconds": 0.900753290974535
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2976537455_f3988c2d46",
+      "seconds": 0.0506168749416247
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2976537455_f3988c2d46",
+      "seconds": 0.29877908306661993
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 79588,
+      "seconds": 0.39366629102732986
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 79588,
+      "seconds": 0.0661360410740599
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 79588,
+      "seconds": 1.1258341249777004
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01430",
+      "seconds": 0.04611358395777643
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01430",
+      "seconds": 0.28745983296539634
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01430",
+      "seconds": 0.5109279160387814
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1255504166_f2437febcb",
+      "seconds": 0.5140537080587819
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1255504166_f2437febcb",
+      "seconds": 0.23605029191821814
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1255504166_f2437febcb",
+      "seconds": 0.05862987507134676
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 95155,
+      "seconds": 0.3765080419834703
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 95155,
+      "seconds": 0.06348841695580631
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 95155,
+      "seconds": 0.4273734580492601
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 514979,
+      "seconds": 0.4683974579675123
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 514979,
+      "seconds": 0.05756083398591727
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 514979,
+      "seconds": 0.35222908295691013
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03905",
+      "seconds": 0.07902674993965775
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03905",
+      "seconds": 0.3360904579749331
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03905",
+      "seconds": 0.4948259580414742
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02995",
+      "seconds": 0.06014758406672627
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02995",
+      "seconds": 0.3271924579748884
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02995",
+      "seconds": 0.6171454999130219
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 405249,
+      "seconds": 0.5569194169947878
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 405249,
+      "seconds": 0.06017908302601427
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 405249,
+      "seconds": 0.2929427089402452
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2082005167_a0d6a70020",
+      "seconds": 0.494067333987914
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2082005167_a0d6a70020",
+      "seconds": 0.23510437493678182
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2082005167_a0d6a70020",
+      "seconds": 0.06453333306126297
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 418961,
+      "seconds": 0.06716712506022304
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 418961,
+      "seconds": 0.44405254209414124
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 418961,
+      "seconds": 0.7047785840695724
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01635",
+      "seconds": 0.05232070793863386
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01635",
+      "seconds": 0.5270082079805434
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01635",
+      "seconds": 0.2729038749821484
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3540155303_08225a4567",
+      "seconds": 0.07072733296081424
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3540155303_08225a4567",
+      "seconds": 0.29750141606200486
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3540155303_08225a4567",
+      "seconds": 0.4970545000396669
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 404249,
+      "seconds": 0.5607816250994802
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 404249,
+      "seconds": 0.32057258300483227
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 404249,
+      "seconds": 0.05825154099147767
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2718049631_e7aa74cb9b",
+      "seconds": 0.2997654579812661
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2718049631_e7aa74cb9b",
+      "seconds": 0.0703363330103457
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2718049631_e7aa74cb9b",
+      "seconds": 0.6415078330319375
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:297169473_d3974e0275",
+      "seconds": 0.40847233310341835
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:297169473_d3974e0275",
+      "seconds": 0.05522479198407382
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:297169473_d3974e0275",
+      "seconds": 0.2353199579520151
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 474039,
+      "seconds": 0.4381286670686677
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 474039,
+      "seconds": 0.5147030829684809
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 474039,
+      "seconds": 0.05119079095311463
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2538477523_1da77eb11c",
+      "seconds": 0.261346917017363
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2538477523_1da77eb11c",
+      "seconds": 0.4861620409647003
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2538477523_1da77eb11c",
+      "seconds": 0.05147187504917383
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 180798,
+      "seconds": 0.23374583292752504
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 180798,
+      "seconds": 0.5553357090102509
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 180798,
+      "seconds": 0.052402458037249744
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2455528149_6c3477fd33",
+      "seconds": 0.703141791978851
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2455528149_6c3477fd33",
+      "seconds": 0.06997466704342514
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2455528149_6c3477fd33",
+      "seconds": 0.2839852499309927
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3163477256_073605e06e",
+      "seconds": 0.7609144579619169
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3163477256_073605e06e",
+      "seconds": 0.1979972500121221
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3163477256_073605e06e",
+      "seconds": 0.05610829102806747
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3211289105_e0360a9c7f",
+      "seconds": 0.06462529208511114
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3211289105_e0360a9c7f",
+      "seconds": 0.32643066707532853
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3211289105_e0360a9c7f",
+      "seconds": 0.5979770830599591
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03992",
+      "seconds": 0.052127999952062964
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03992",
+      "seconds": 0.4760485419537872
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03992",
+      "seconds": 0.31607645796611905
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1408958345_68eea9a4e4",
+      "seconds": 0.34692025010008365
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1408958345_68eea9a4e4",
+      "seconds": 0.06768466695211828
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1408958345_68eea9a4e4",
+      "seconds": 0.52875258307904
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 107094,
+      "seconds": 0.47874870791565627
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 107094,
+      "seconds": 0.05469424999319017
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 107094,
+      "seconds": 0.5050979170482606
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2319808437_bbbdc317c0",
+      "seconds": 0.32467608305159956
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2319808437_bbbdc317c0",
+      "seconds": 0.4590438330778852
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:2319808437_bbbdc317c0",
+      "seconds": 0.04818316700402647
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02235",
+      "seconds": 0.7221429579658434
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02235",
+      "seconds": 0.28206674999091774
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02235",
+      "seconds": 0.08372962498106062
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3607405494_0df89110a6",
+      "seconds": 0.5998588749207556
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3607405494_0df89110a6",
+      "seconds": 0.2386873330688104
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3607405494_0df89110a6",
+      "seconds": 0.06497062498237938
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01124",
+      "seconds": 0.09072754206135869
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01124",
+      "seconds": 0.48643945797812194
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01124",
+      "seconds": 0.335809167008847
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3744832122_2f4febdff6",
+      "seconds": 0.06356420798692852
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3744832122_2f4febdff6",
+      "seconds": 0.27455437497701496
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:3744832122_2f4febdff6",
+      "seconds": 0.5757344169542193
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:159712188_d530dd478c",
+      "seconds": 0.049701749929226935
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:159712188_d530dd478c",
+      "seconds": 0.30395245796535164
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:159712188_d530dd478c",
+      "seconds": 0.5873397919349372
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03987",
+      "seconds": 0.5231234579114243
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03987",
+      "seconds": 0.3313100830418989
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03987",
+      "seconds": 0.06925704202149063
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 36539,
+      "seconds": 0.07353170798160136
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 36539,
+      "seconds": 0.4271557499887422
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 36539,
+      "seconds": 0.5179920000955462
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04736",
+      "seconds": 0.5185337910661474
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04736",
+      "seconds": 0.05331550003029406
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_04736",
+      "seconds": 0.3163697090931237
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:90011335_cfdf9674c2",
+      "seconds": 0.28967512503731996
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:90011335_cfdf9674c2",
+      "seconds": 0.5250065419822931
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:90011335_cfdf9674c2",
+      "seconds": 0.050726625020615757
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03398",
+      "seconds": 0.4897742080502212
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03398",
+      "seconds": 0.2777901659719646
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03398",
+      "seconds": 0.08012541697826236
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_00928",
+      "seconds": 0.5718945839907974
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_00928",
+      "seconds": 0.06395479093771428
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_00928",
+      "seconds": 0.34032158402260393
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 433103,
+      "seconds": 0.41579308395739645
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 433103,
+      "seconds": 0.5385573749663308
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 433103,
+      "seconds": 0.04643395799212158
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 304404,
+      "seconds": 0.4425222090212628
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 304404,
+      "seconds": 0.0572565000038594
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 304404,
+      "seconds": 0.40439087501727045
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 270297,
+      "seconds": 0.07369012490380555
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 270297,
+      "seconds": 0.6695137079805136
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 270297,
+      "seconds": 0.4453760409960523
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01011",
+      "seconds": 0.5772833329392597
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01011",
+      "seconds": 0.2951699999393895
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01011",
+      "seconds": 0.05677995807491243
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01474",
+      "seconds": 0.6025853749597445
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01474",
+      "seconds": 0.28387462499085814
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01474",
+      "seconds": 0.0639037499204278
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 373315,
+      "seconds": 0.3659274169476703
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 373315,
+      "seconds": 0.6709953339304775
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 373315,
+      "seconds": 0.05357283295597881
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 168974,
+      "seconds": 0.27154291700571775
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 168974,
+      "seconds": 0.0768302499782294
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 168974,
+      "seconds": 0.6606501250062138
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 304291,
+      "seconds": 0.3817797499941662
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 304291,
+      "seconds": 0.06574412493500859
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 304291,
+      "seconds": 0.5252358330180869
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1456630952_dd4778a48f",
+      "seconds": 0.5105022499337792
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1456630952_dd4778a48f",
+      "seconds": 0.27730212500318885
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1456630952_dd4778a48f",
+      "seconds": 0.06779066694434732
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03228",
+      "seconds": 0.3569317499641329
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03228",
+      "seconds": 0.06906604196410626
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03228",
+      "seconds": 0.554575499962084
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 4134,
+      "seconds": 0.5163784999167547
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 4134,
+      "seconds": 0.05925858404953033
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 4134,
+      "seconds": 0.3713789579924196
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01673",
+      "seconds": 0.06152791599743068
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01673",
+      "seconds": 0.6414647090714425
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_01673",
+      "seconds": 0.2109024589881301
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03290",
+      "seconds": 0.5920739580178633
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03290",
+      "seconds": 0.06249804201070219
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_03290",
+      "seconds": 0.32691383408382535
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 124636,
+      "seconds": 0.07506900001317263
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 124636,
+      "seconds": 0.5794460839824751
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 124636,
+      "seconds": 0.3370089160744101
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1370615506_2b96105ca3",
+      "seconds": 0.8225399579387158
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1370615506_2b96105ca3",
+      "seconds": 0.23746749991551042
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:1370615506_2b96105ca3",
+      "seconds": 0.0736515000462532
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02439",
+      "seconds": 0.3574084580177441
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02439",
+      "seconds": 0.5984533749287948
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "docci",
+      "image_id": "docci:test_02439",
+      "seconds": 0.051672999979928136
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:241031254_0c6f30e3d1",
+      "seconds": 0.238754624966532
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:241031254_0c6f30e3d1",
+      "seconds": 0.05832291708793491
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "flickr8k",
+      "image_id": "flickr8k:241031254_0c6f30e3d1",
+      "seconds": 0.5216851249570027
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 213224,
+      "seconds": 0.33419312501791865
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 213224,
+      "seconds": 0.0669929999858141
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 213224,
+      "seconds": 0.542080125072971
+    },
+    {
+      "kind": "image",
+      "method": "released_v0",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 120572,
+      "seconds": 0.06114812497980893
+    },
+    {
+      "kind": "image",
+      "method": "qwen_geometry",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 120572,
+      "seconds": 0.393405833048746
+    },
+    {
+      "kind": "image",
+      "method": "caption_then_bge",
+      "repeat": 2,
+      "dataset": "coco",
+      "image_id": 120572,
+      "seconds": 0.6070253329817206
+    }
+  ],
+  "caption_over_v2_ratio": {
+    "caption_over_direct_ratio": 1.857590738157624,
+    "ci_low": 1.7572142691524715,
+    "ci_high": 1.970206495257003,
+    "resamples": 2000,
+    "unit": "paired image cluster after averaging three repeats",
+    "seed": 42,
+    "scope": "conditional on this device/run/model residency; not independent timing sessions"
+  }
+}

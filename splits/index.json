@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "protocol": "custom splits; preserve JSONL row order",
+  "total_images": 14089,
+  "sources": {
+    "coco": {
+      "dataset": "COCO val2017 captions",
+      "revision": "2017 release",
+      "url": "https://cocodataset.org/#download",
+      "seed": 42
+    },
+    "flickr8k": {
+      "repository": "tsystems/flickr8k",
+      "revision": "81fc5f3a41274c80f17b0406426d57cac57ce6fb",
+      "seed": 2026,
+      "split_type": "custom_image_disjoint_not_official",
+      "source_files": [
+        {
+          "url": "https://huggingface.co/datasets/tsystems/flickr8k/resolve/81fc5f3a41274c80f17b0406426d57cac57ce6fb/data/train-00000-of-00003.parquet?download=true",
+          "bytes": 373214970,
+          "sha256": "5bb630f4389fb1d01705577dcc7769a6fcdcc5598be47b11f5995f6351a7b866"
+        },
+        {
+          "url": "https://huggingface.co/datasets/tsystems/flickr8k/resolve/81fc5f3a41274c80f17b0406426d57cac57ce6fb/data/train-00001-of-00003.parquet?download=true",
+          "bytes": 363960832,
+          "sha256": "8a47954a325853d95c481261fbc0dec2fea06ae21267545ea7ae03ec390a057e"
+        },
+        {
+          "url": "https://huggingface.co/datasets/tsystems/flickr8k/resolve/81fc5f3a41274c80f17b0406426d57cac57ce6fb/data/train-00002-of-00003.parquet?download=true",
+          "bytes": 378814640,
+          "sha256": "22e0d386d2896db64d68b6e1855133a353809ad22a204543edb3583f0280c9e5"
+        }
+      ]
+    },
+    "docci": {
+      "repository": "nicolollo/docci",
+      "revision": "d25e433474a72db3853da8e208d564e9b98795e6",
+      "seed": 2026,
+      "split_type": "custom_500_dev_500_sealed_from_original_5000_test_not_official",
+      "source_files": [
+        {
+          "url": "https://huggingface.co/datasets/nicolollo/docci/resolve/d25e433474a72db3853da8e208d564e9b98795e6/data/test-00000-of-00006.parquet?download=true",
+          "bytes": 434153061,
+          "sha256": "2cc70816eda9c39d93f51d50e56873cd24f4fb550f42166c0d7ccf19cb0bd888"
+        },
+        {
+          "url": "https://huggingface.co/datasets/nicolollo/docci/resolve/d25e433474a72db3853da8e208d564e9b98795e6/data/test-00001-of-00006.parquet?download=true",
+          "bytes": 416627779,
+          "sha256": "5b3107748198f73d092d84cbaea56f7c66e05afbf739b6222ca8aed080566c67"
+        },
+        {
+          "url": "https://huggingface.co/datasets/nicolollo/docci/resolve/d25e433474a72db3853da8e208d564e9b98795e6/data/test-00002-of-00006.parquet?download=true",
+          "bytes": 425828960,
+          "sha256": "229795b5f0dd6f999b81a8895eb0fec37c4c15e6b6b03b22f51bba14a6ac3fd5"
+        },
+        {
+          "url": "https://huggingface.co/datasets/nicolollo/docci/resolve/d25e433474a72db3853da8e208d564e9b98795e6/data/test-00003-of-00006.parquet?download=true",
+          "bytes": 435018351,
+          "sha256": "1f2925fbd1aded5ef708953538f83ff6a39e46ed33229a4368033bfa541772a4"
+        },
+        {
+          "url": "https://huggingface.co/datasets/nicolollo/docci/resolve/d25e433474a72db3853da8e208d564e9b98795e6/data/test-00004-of-00006.parquet?download=true",
+          "bytes": 425266864,
+          "sha256": "9606bceb67960d97b39f72bcfac2c0c2b2d811ca8df2ce6a1d4ab7180d1805ff"
+        },
+        {
+          "url": "https://huggingface.co/datasets/nicolollo/docci/resolve/d25e433474a72db3853da8e208d564e9b98795e6/data/test-00005-of-00006.parquet?download=true",
+          "bytes": 436398070,
+          "sha256": "02cb9bc93a9c352e63cbf9c810e4399f5e7b9e0da58ce68a0ea654a5477ded52"
+        }
+      ],
+      "official_annotations": {
+        "url": "https://storage.googleapis.com/docci/data/docci_descriptions.jsonlines",
+        "bytes": 11000214,
+        "sha256": "c9df4819963883af35ddd2cf257949892fd8c6d88b33a012094352df60719800"
+      }
+    }
+  },
+  "splits": {
+    "coco_train.jsonl": {
+      "source": "coco",
+      "split": "train",
+      "images": 4000,
+      "captions": 20000,
+      "sha256": "727ae48e69ee78d693f08a6e6d577bafd312f045eb4aa46e051b8011210d1ef1"
+    },
+    "coco_validation.jsonl": {
+      "source": "coco",
+      "split": "validation",
+      "images": 500,
+      "captions": 2500,
+      "sha256": "9fc0919c4b4ecc7ad502f95eea2b7bf96572828e08273d3792acf6e81ec2c513"
+    },
+    "coco_test.jsonl": {
+      "source": "coco",
+      "split": "test",
+      "images": 500,
+      "captions": 2500,
+      "sha256": "f3029a798c31e123cb4ae233bf944989e06a47850311e6a74d1e489e2cf67cc6"
+    },
+    "flickr8k_train.jsonl": {
+      "source": "flickr8k",
+      "split": "train",
+      "images": 6000,
+      "captions": 29994,
+      "sha256": "4aeb6c650618ac1520b97364cd09ce067e067cef8723aa800b0a185f00df7a23"
+    },
+    "flickr8k_val.jsonl": {
+      "source": "flickr8k",
+      "split": "val",
+      "images": 1000,
+      "captions": 5003,
+      "sha256": "31abc80e4a18c90b2973d59aabcc17c0c4d86aa51e7a2f1e8a38037cde3e4dba"
+    },
+    "flickr8k_sealed_test.jsonl": {
+      "source": "flickr8k",
+      "split": "sealed_test",
+      "images": 1089,
+      "captions": 5443,
+      "sha256": "ba38085d141a362a2f104511ea698f183e1ddd4d38ef3448c5aa8470d0966d4a"
+    },
+    "docci_dev.jsonl": {
+      "source": "docci",
+      "split": "dev",
+      "images": 500,
+      "captions": 500,
+      "sha256": "c287fd70fb81df4c105d820171ed3cb1308f97c9b25805fe9117185439c69b98"
+    },
+    "docci_sealed_test.jsonl": {
+      "source": "docci",
+      "split": "sealed_test",
+      "images": 500,
+      "captions": 500,
+      "sha256": "f92cd3dadecba222c349fd3d5f02665bd494d54430838a92ffd8bf816d21f614"
+    }
+  },
+  "exclusions": {
+    "flickr8k": {
+      "duplicate_collapses": [
+        {
+          "excluded": "flickr8k:3050606344_af711c726c",
+          "retained": "flickr8k:2851198725_37b6027625"
+        }
+      ],
+      "cross_source_exclusions": [
+        {
+          "image_id": "flickr8k:2947274789_a1a35b33c3",
+          "split": "sealed_test",
+          "image_sha256": "b4f1012183b47482a31955ac38bbad9b7711b018ff20e2cb60b355033f323dc6",
+          "overlap_with": "coco:110449",
+          "reason": "Exact image bytes already used in legacy COCO training"
+        }
+      ]
+    },
+    "docci": {
+      "duplicate_collapses": [],
+      "cross_source_exclusions": []
+    }
+  },
+  "caption_hash_encoding": "SHA256 of UTF-8 json.dumps(captions, ensure_ascii=False, separators=(',', ':')); preserve order, whitespace, Unicode; no trailing newline"
+}
